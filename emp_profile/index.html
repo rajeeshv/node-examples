@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+        <script src="mongo.js"></script>
+    </head>
+
+    <body>
+        <form action="index.html" method="POST">
+            <header>Employee Details:</header>
+            <table border="1" style="border: 1px; border-color: blue">
+                <tr><td>Employee name:</td><td><input name="employeeName" id="employeeName" /></td></tr>
+
+                <tr><td>Designation:</td><td><input name="designation" id="designation" /></td></tr>
+
+                <tr><td>Skill:</td><td id="skillTD">
+                        <input name="skill"/><img id="plusIcon" src="plus.gif" /><br/>
+                    <input name="skill"/><br/>
+                    <input name="skill"/><br/>
+                    </td></tr>
+
+                <tr><td colspan="2" align="center"><input name="save" id="save" type="submit" value="Save" /></td></tr>
+            </table>
+        </form>
+    </body>
+
+</html>
