@@ -1,0 +1,22 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    - if (session_user) {
+      p
+        span Hello&nbsp;
+        span= session_user.name.first
+        span !
+      p
+        form(method="POST", action="/session")
+            input(type="hidden", name="_method", value="DELETE")
+            input(type="submit", value="Log out")
+     - } else {
+            p
+                a(href="/session/new") Login
+                span &nbsp;or&nbsp;
+                a(href="/users/new") Register
+     - }
+    block content
